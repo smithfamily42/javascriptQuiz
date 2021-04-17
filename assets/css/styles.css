@@ -1,0 +1,12 @@
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	font-family: 'fira sans', sans-serif;
+}
+
+.fun-text {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 900;
+	font-size: 120%;
+}
