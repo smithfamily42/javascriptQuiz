@@ -10,3 +10,15 @@ footer {
 	font-weight: 900;
 	font-size: 120%;
 }
+.card, .list-group-item {
+	border: none;
+}
+.feedback {
+	text-align: center;
+	border-top: thin outset orange;
+	width: 50%;
+	margin: .5em auto;
+}
+.hide {
+	display: none;
+}

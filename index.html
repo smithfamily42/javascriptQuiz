@@ -23,13 +23,27 @@
             </div>
         </div>
         <div class="row">
-            <div id="game-area" class="col-12 text-center"><!--dynamically generated content for game-->
+            <div id="button-area" class="col-12 text-center">
                 <button id="start" type="button" class="btn btn-primary btn-lg mb-2">Start Game</button>
-                <p>Here I will put the dynamically generated quiz game content</p>
+                <p>Incorrect answers will deduct from the remaining time.</p>
             </div>
         </div>
         <div class="row">
-            <div id="result" class="col-12 text-center"><!--dynamically display result Correct or Wrong-->
+            <div class="col-6 text-center mx-auto"><!--dynamically generated content for game-->
+                <div class="card">
+                    <div class="card-body">
+                      <h5 id="questionNum" class="card-title fun-text">Question</h5>
+                      <p id="questionText" class="card-text">Questions will appear here. Select an answer from the buttons below. Click Start Game to begin.</p>
+                    </div>
+                    <div id="answer-group">
+
+                    </div>
+                </div>    
+                  
+            </div>
+        </div>
+        <div class="row">
+            <div id="result" class="col-12 text-center mt-3"><!--dynamically display result Correct or Wrong-->
                 <p>Briefly display the result of the answer: Correct or Wrong</p>
             </div>
         </div>
