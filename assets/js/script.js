@@ -64,10 +64,10 @@ function dispQuestion() {
     option.choices.forEach(function(answer, i) {
         //creating new button for each choice
     var answerNode = document.createElement("button");
-    answerNode.setAttribute("class", "btn d-block btn-success");
+    answerNode.setAttribute("class", "btn d-block btn-success mb-1");
     answerNode.setAttribute("value", answer);
 
-    answerNode.textContent = i + 1 + ". " + answer;
+    answerNode.textContent = i + 1 + ".  " + answer;
 
     //attach click event listener
     answerNode.onclick = questionClick;

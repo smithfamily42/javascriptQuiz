@@ -10,9 +10,10 @@ footer {
 	font-weight: 900;
 	font-size: 120%;
 }
-.card, .list-group-item {
+.card {
 	border: none;
 }
+
 .feedback {
 	text-align: center;
 	border-top: thin outset orange;
