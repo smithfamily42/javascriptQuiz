@@ -7,6 +7,18 @@ var feedbackEl = document.getElementById("result");
 var choicesEl = document.getElementById("answer-group");
 var currentQuestion = 0;
 
+// section final
+const finalEl = document.querySelector("#final");
+// user initials
+let initialsInput = document.querySelector("#initials");
+
+// section highscores
+const highscoresEl = document.querySelector("#highscores");
+// ordered list
+let scoreListEl = document.querySelector("#score-list");
+// array of scores
+let scoreList = [];
+
 //array for questions
 var questions = [
     { q: 'Which of the following is a valid type of function javascript supports?',
@@ -104,12 +116,53 @@ function startQuiz () {
 
 }
 /*
-    options.choices.forEach (function(answer, i) {
-        var answerNode = document.createElement('button');
+function addScore(event) {
+    event.preventDefault();
 
-for (var i = 0; i < questions.length; i++) {
-    var answer = ;
+    finalEl.style.display = "none";
+    highscoresEl.style.display = "block";
+
+    var init = initialsInput.value.toUpperCase();
+    scoreList.push({ initials: init, score: timeLeft });
+
+    // sort scores
+    scoreList = scoreList.sort((a, b) => {
+        if (a.score < b.score) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    
+    scoreListEl.innerHTML="";
+    for (let i = 0; i < scoreList.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = `${scoreList[i].initials}: ${scoreList[i].score}`;
+        scoreListEl.append(li);
+    }
+
+    // Add to local storage
+    storeScores();
+    displayScores();
+}
+
+function storeScores() {
+    localStorage.setItem("scoreList", JSON.stringify(scoreList));
+}
+
+function displayScores() {
+    // Get stored scores from localStorage
+
+    let storedScoreList = JSON.parse(localStorage.getItem("scoreList"));
+
+  
+    if (storedScoreList !== null) {
+        scoreList = storedScoreList;
+    }
+}
 */
 
 //Events
 startBtn.onclick = startQuiz;
+// Add score
+submitScrBtn.addEventListener("click", addScore);
